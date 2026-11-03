@@ -5,4 +5,66 @@
 
 .container {
     background-color: cornflowerblue;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    margin: auto;
+    border: 3px solid green;
+
+    /* Dirección principal de los items */
+    /* flex-direction: column-reverse; */
+
+    /* Si los items no caben se crea una nueva línea en el eje secundario (nueva fila o columna) */
+    /* flex-wrap: wrap; */
+
+    /* Combina flex-direction y flex-wrap */
+    /* flex-flow: row wrap; */
+
+    /* Eje principal */
+    /* justify-content: space-evenly; */
+
+    /* Eje secundario */
+    /* align-items: center; */
+
+    /* Se aplica al eje secundario por conjuntos (a cada fila o a cada columna) */
+    /*align-content: space-around; */
+
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    
+    /* Para que los items ocupen el espacio sobrante del contenedor. En el eje principal. */
+    /* Por defecto es 0 para que esté desactivado. */
+    flex-grow: 1;
+}
+
+.item1 {
+    background: blue;
+    /* align-self: flex-end; */
+    /* Para que crezca más que los demás Items. El doble para ser exactos */
+    flex-grow: 2;
+
+}
+
+.item2 {
+    background: chartreuse;
+
+    /* Order por defecto: 0 */
+    /* Order mayor a 0 va al final. Order menor a 0 va al principio */
+    /* order: 1; */
+}
+
+.item3 {
+    background: darkorange;
+
+    /* Para que no se achique. El valor por defecto es 1, para que si se achique si no cabe en el contenedor padre. */
+    /* flex-shrink: 0; */
+}
+
+.item4 {
+    background: violet;
+    /* order: -1; */
 }
