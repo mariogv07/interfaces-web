@@ -1,0 +1,48 @@
+.centro {
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+form {
+    width: 1000px;
+}
+
+/* Para que cada label e input estén centrados */
+.accion {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    button {
+        margin-top: 20px;
+    }
+}
+
+/* Formato del nombre del campo */
+.campo {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    background-image: linear-gradient(rgba(78, 202, 107, 0.6), rgba(78, 202, 107, 0.6)), url(../src/img/hierba.png);
+    background-size:100px;
+    background-repeat: repeat;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+/* Formatos de las opciones o de donde escribe el usuario */
+.escribir {
+    font-size: 15px;
+}
+
+.opcion {
+    font-size: 20px;
+}
+
+

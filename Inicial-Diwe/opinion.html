@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expectativas</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/opinion.css">
+</head>
+
+<body>
+    <!-- Header de la página con el icono y los enlaces a las demás páginas -->
+    <div class="header">
+        <div class="icono">
+            <a href="index.html">
+                <img src="src/img/logo.png" alt="Icono">
+            </a>
+        </div>
+
+        <div class="paginas">
+            <a href="pokemons.html">
+                <h1>Pokemons</h1>
+            </a>
+        </div>
+        <div class="paginas">
+            <a href="objetos.html">
+                <h1>Objetos</h1>
+            </a>
+        </div>
+        <div class="paginas">
+            <a href="opinion.html">
+                <h1>Opinión</h1>
+            </a>
+        </div>
+    </div>
+
+    <h2 class="fondo centro">¿Qué te ha parecido la regulación?</h2>
+
+    <div class="fondo centro">
+        <form action="">
+            <!-- Identificación del usuario -->
+            <div class="accion">
+                <label for="nombre" class="campo"><b>Nombre</b></label>
+                <input type="text" name="nombre" class="escribir" placeholder="Escriba su nombre..." required>
+            </div>
+            <div class="accion">
+                <label for="nombre" class="campo"><b>Email</b></label>
+                <input type="email" name="email" class="escribir" placeholder="Email..." required>
+            </div>
+            <!-- Elegir 1 solo estilo de juego -->
+            <div class="accion">
+                <label for="estilo-equipo" class="campo"><b>¿Qué estilo de equipo jugarás en esta
+                        regulación?</b></label>
+                <select name="estilo-equipo" class="escribir">
+                    <option value="" selected>Selecciona un arquetipo...</option>
+                    <option value="hyper-offense">Hyper Offense</option>
+                    <option value="balance">Balance</option>
+                    <option value="stall">Stall</option>
+                    <option value="clima">Equipo de Clima / Terreno</option>
+                </select>
+            </div>
+            <!-- Elegir varias opciones de mecánicas -->
+            <div class="accion">
+                <legend class="campo"><b>¿Qué nuevas mecánicas vas a utilizar?</b></legend>
+
+                <label class="opcion">
+                    <input type="checkbox" name="mecanicas" value="megaevolucion">
+                    Megaevoluciones
+                </label>
+                <label class="opcion">
+                    <input type="checkbox" name="mecanicas" value="semillas">
+                    Semillas de Terreno
+                </label>
+                <label class="opcion">
+                    <input type="checkbox" name="mecanicas" value="objetos-trampa">
+                    Tarjeta Roja / Botón Escape
+                </label>
+            </div>
+            <!-- Comentarios adicionales para el usuario -->
+            <div class="accion">
+                <label for="opinion" class="campo"><b>Comentarios adicionales</b></label>
+                <textarea class="escribir" name="opinion" rows="10" cols="100" placeholder="Escribe aquí..."></textarea>
+            </div>
+            <!-- Botón de enviar -->
+            <div class="accion">
+                <button type="submit">Enviar Expectativas</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

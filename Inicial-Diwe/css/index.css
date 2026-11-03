@@ -1,0 +1,16 @@
+/* Texto de bienvenida de la web */
+.bienvenida {
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.titulito {
+    text-align: left;
+    margin-left: 10%;
+    font-size: 200%;
+}
+
+h4 {
+    margin-left: 3%;
+    font-size: 150%;
+}

@@ -1,0 +1,93 @@
+/* imagen de fondo */
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../src/img/fondo.png');
+    background-repeat: repeat;
+    margin: 0;
+}
+
+/* Quita el subrayado de los links del header */
+.header {
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        width: 15%;
+        height: 15%;
+    }
+
+    position: sticky;
+    align-items: center;
+    display: flex;
+    gap: 1%;
+    top: 0;
+    background-image: url('../src/img/banner.png');
+    background-repeat: repeat;
+    padding: 1px;
+}
+
+/* Icono del header */
+.icono {
+    margin-right: auto;
+}
+
+/* Link a las demás páginas de la web */
+.paginas {
+    background-color: rgb(202, 12, 12);
+    width: fit-content;
+    border-radius: 20px;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-right: 10px;
+
+    h1 {
+        color: rgb(221, 251, 26);
+        font-size: 150%;
+    }
+}
+
+/* Texto normal formateado para todas las páginas */
+.texto-plano {
+    font-size: 20px;
+    margin-left: 2%;
+}
+
+/* Fondo de agua para los div que necesite */
+.fondo {
+    background-image: url('../src/img/agua.png');
+    background-repeat: repeat;
+    padding: 1%;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 2%;
+}
+
+/* Formato de las 2 tablas encontradas en la página */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: auto;
+    background-color: rgba(255, 255, 255, 0.236);
+}
+
+th, td {
+    padding: 10px;
+}
+
+/* --------------- Footer -------------- */
+.icono-footer {
+    img {
+        height: 100px;
+        width: auto;
+    }
+    p {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: fit-content;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    background-image: url(../src/img/hierba.png);
+    background-size:100px;
+    background-repeat: repeat;
+
+}

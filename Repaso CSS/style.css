@@ -1,0 +1,41 @@
+body{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('joseda.png');
+    background-repeat: repeat;
+    background-size: 20PX;
+}
+.navbar{
+    position: sticky;
+    background-color: yellow;
+    top: 0;
+    left: 0;
+    justify-items: center;
+    z-index: 1000;
+}
+
+.bottom{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: chartreuse;
+    z-index: 10000;
+}
+
+.parraf{
+    position: relative;
+    width: 25%;
+    background-color: rgb(219, 151, 50);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.oculto{
+    position: absolute;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    color: wheat;
+}
