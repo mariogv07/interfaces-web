@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    background-color: rgb(24, 31, 42);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedores-partes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedor-claro{
+    background-color: rgb(28, 36, 49);
+    gap: 70px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+/* Header de la página */
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    gap: 40px;
+    /* Ocupa 1200px si tiene ese espacio disponible */
+    width: 1200px;
+    /* Sino, como máximo ocupa el 100% del espacio disponible, para que sea responsive */
+    max-width: 100%;
+}
+
+.contenedor-header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#logo {
+    height: 30px;
+    width: auto;
+}
+
+
+
+
+/* Ilustración de introducción */
+#illustration-intro-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#illustration-intro-img{
+    height: auto;
+    width: 500px;
+    max-width: 100%;
+    z-index: 1;
+}
+
+#curvy-contenedor{
+    background-color: rgb(28, 36, 49);
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: -45px;
+}
+
+#curvy-img{
+    width: 100%;
+    height: 100px;
+}
+
+
+
+
+/* Parte oscura antes del footer */
+#contenedor-oscuro{
+    width: 1200px;
+    max-width: 100%;
+    text-align: center;
+    background-color: black;
+    gap: 100px;
+}
+
+/* Descripción primera */
+#descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#titulo{
+    font-size: 50px;
+}
+
+.boton{
+    padding: 20px 80px 20px 80px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#empezar{
+    background: linear-gradient(to right, black, rgb(250, 188, 199));
+}
+
+
+/* Prestaciones */
+#prestaciones-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    width: 100%;
+}
+
+.prestacion{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.prestacion-img{
+    width:fit-content;
+    height: 100px;
+}
+
+/* Productividad */
+#contenedor-productividad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    width: 1200px;
+    max-width: 100%;
+}
+
+#img-productive{
+    height: auto;
+    width: 500px;
+    max-width: 100%;
+}
+
+#contenedor-descripcion-productividad{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 30px;
+    width: 550px;
+    max-width: 100%;
+}
+
+#link-productividad {
+    color: rgb(98, 223, 216);
+    text-underline-offset: 12px;
+}
+
+/* Opiniones */
+
