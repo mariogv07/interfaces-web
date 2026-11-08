@@ -4,21 +4,31 @@
     font-family: Arial;
 }
 
-body{
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
     background-color: rgb(24, 31, 42);
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* Tuve que poner esta propiedad ya que la imagen curvy, al querer que ocupara todo el ancho de la página siempre se pasaba de ancho. */
+    /* Puse 100vw en width, pero para ordenador no servía porque se pasaba, 99vw funcionaba para ordenador pero no para dispositivos más pequeños, se quedaba corto. */
+    overflow-x: hidden;
 }
 
-.contenedores-partes{
+.contenedores-partes {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
+    width: 100%;
 }
 
-#contenedor-claro{
+#contenedor-claro {
     background-color: rgb(28, 36, 49);
     gap: 70px;
     width: 100%;
@@ -26,7 +36,7 @@ body{
 }
 
 /* Header de la página */
-header{
+header {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
@@ -45,7 +55,7 @@ header{
     flex-wrap: wrap;
 }
 
-#logo {
+#logo-header {
     height: 30px;
     width: auto;
 }
@@ -54,7 +64,7 @@ header{
 
 
 /* Ilustración de introducción */
-#illustration-intro-contenedor{
+#illustration-intro-contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,22 +72,22 @@ header{
     position: relative;
 }
 
-#illustration-intro-img{
+#illustration-intro-img {
     height: auto;
     width: 500px;
     max-width: 100%;
     z-index: 1;
 }
 
-#curvy-contenedor{
+#curvy-contenedor {
     background-color: rgb(28, 36, 49);
     display: flex;
-    width: 100%;
+    width: 110%;
     position: absolute;
-    bottom: -45px;
+    bottom: -40px;
 }
 
-#curvy-img{
+#curvy-img {
     width: 100%;
     height: 100px;
 }
@@ -86,27 +96,27 @@ header{
 
 
 /* Parte oscura antes del footer */
-#contenedor-oscuro{
+#contenedor-oscuro {
     width: 1200px;
     max-width: 100%;
     text-align: center;
-    background-color: black;
     gap: 100px;
+    padding-bottom: 300px;
 }
 
 /* Descripción primera */
-#descripcion{
+#descripcion {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 }
 
-#titulo{
+#titulo {
     font-size: 50px;
 }
 
-.boton{
+.boton {
     padding: 20px 80px 20px 80px;
     border-radius: 30px;
     border: none;
@@ -115,13 +125,13 @@ header{
     font-size: 17px;
 }
 
-#empezar{
+#empezar {
     background: linear-gradient(to right, black, rgb(250, 188, 199));
 }
 
 
 /* Prestaciones */
-#prestaciones-contenedor{
+#prestaciones-contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -129,8 +139,8 @@ header{
     width: 100%;
 }
 
-.prestacion{
-    width: 550px;
+.prestacion {
+    width: 540px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -139,13 +149,13 @@ header{
     margin-top: 50px;
 }
 
-.prestacion-img{
-    width:fit-content;
+.prestacion-img {
+    width: fit-content;
     height: 100px;
 }
 
 /* Productividad */
-#contenedor-productividad{
+#contenedor-productividad {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,13 +165,13 @@ header{
     max-width: 100%;
 }
 
-#img-productive{
+#img-productive {
     height: auto;
     width: 500px;
     max-width: 100%;
 }
 
-#contenedor-descripcion-productividad{
+#contenedor-descripcion-productividad {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -172,8 +182,191 @@ header{
 
 #link-productividad {
     color: rgb(98, 223, 216);
+    text-decoration: underline;
     text-underline-offset: 12px;
 }
 
 /* Opiniones */
 
+#contenedor-opiniones-general {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 1200px;
+    max-width: 100%;
+}
+
+#cita {
+    img {
+        height: auto;
+        width: 40px;
+        align-self: flex-start;
+    }
+
+    display: flex;
+    position: absolute;
+    top: -32px;
+    left: 0px;
+}
+
+#contenedor-opiniones {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.opinion {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(28, 36, 49);
+    border-radius: 5px;
+    padding: 20px;
+    gap: 20px;
+    width: 340px;
+    text-align: left;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.usuario {
+    display: flex;
+
+    img {
+        height: auto;
+        width: 50px;
+        border-radius: 100%;
+    }
+
+    justify-content: center;
+    gap: 20px;
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 13px;
+        color: rgb(118, 122, 127);
+    }
+}
+
+/* Formulario de acceso con email */
+#contenedor-access {
+    background-color: rgb(28, 36, 49);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(28, 36, 49);
+    border-radius: 15px;
+    gap: 30px;
+    padding: 50px 20px 50px 20px;
+    align-items: center;
+    position: absolute;
+    top: -150px;
+    align-self: center;
+    margin: 0 20px;
+}
+
+#formulario-email {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#gratis {
+    background: linear-gradient(to right, rgb(99, 223, 216), rgb(53, 161, 205));
+    padding: 20px;
+    color: rgb(167, 187, 194);
+    flex-shrink: 0;
+}
+
+#email {
+    padding: 20px;
+    width: 100%;
+    max-width: 850px;
+    font-weight: normal;
+}
+
+/* Footer de la web */
+footer {
+    background-color: rgb(11, 21, 35);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 300px 20px 80px 20px;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#contenedor-footer{
+    width: 1200px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#contenedor-info-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    div{
+        margin-top: 20px;
+    }
+}
+
+#contenedor-ubicacion {
+    p {
+        margin-top: 10px;
+        max-width: 250px;
+    }
+
+    display: flex;
+    gap: 10px;
+}
+
+#logo-footer {
+    height: auto;
+    width: 200px;
+}
+
+.icono-footer {
+    height: min-content;
+    width: 15px;
+}
+
+#contenedor-footer-contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-contacto {
+    display: flex;
+    gap: 10px;
+    .icono-footer {
+        width: 20px;
+    }
+    align-items: center;
+}
+
+.contenedor-footer-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contenedor-redes {
+    .icono-footer {
+        width: 40px;
+        border: 1px solid white;
+        border-radius: 100%;
+        padding: 5px;
+    }
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}

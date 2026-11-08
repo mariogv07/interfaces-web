@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
 </head>
 
 <body>
     <div class="contenedores-partes" id="contenedor-claro">
         <header>
             <div class="contenedor-header">
-                <img src="images/logo.svg" alt="no-encontrado" id="logo">
+                <img src="images/logo.svg" alt="no-encontrado" id="logo-header">
             </div>
             <div class="contenedor-header">
-                <p>Features</p>
-                <p>Team</p>
-                <p>Sign In</p>
+                <a href="">Features</a>
+                <a href="">Team</a>
+                <a href="">Sign In</a>
             </div>
         </header>
 
@@ -80,44 +81,99 @@
             </div>
         </div>
 
-        <div id="contenedor-opiniones">
-            <div id="cita">
-                <img src="images/bg-quotes.png" alt="no-encontrado">
-            </div>
-            <div class="opinion">
-                <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a wll-oiled collaboration machine.</p>
-                <div class="usuario">
-                    <img src="images/profile-1.jpg" alt="no-encontrado">
-                    <div>
-                        <h2>Satish Patel</h2>
-                        <p class="cargo-usuario">Founder & CEO, Huddle</p>
+        <div id="contenedor-opiniones-general">
+            <div id="contenedor-opiniones">
+                <div class="opinion">
+                    <div id="cita">
+                        <img src="images/bg-quotes.png" alt="no-encontrado">
+                    </div>
+                    <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our
+                        team has become a wll-oiled collaboration machine.</p>
+                    <div class="usuario">
+                        <img src="images/profile-1.jpg" alt="no-encontrado">
+                        <div>
+                            <h2>Satish Patel</h2>
+                            <p class="cargo-usuario">Founder & CEO, Huddle</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="opinion">
-                <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a wll-oiled collaboration machine.</p>
-                <div class="usuario">
-                    <img src="images/profile-2.jpg" alt="no-encontrado">
-                    <div>
-                        <h2>Bruce McKenzie</h2>
-                        <p class="cargo-usuario">Founder & CEO, Huddle</p>
+                <div class="opinion">
+                    <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our
+                        team has become a wll-oiled collaboration machine.</p>
+                    <div class="usuario">
+                        <img src="images/profile-2.jpg" alt="no-encontrado">
+                        <div>
+                            <h2>Bruce McKenzie</h2>
+                            <p class="cargo-usuario">Founder & CEO, Huddle</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="opinion">
-                <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a wll-oiled collaboration machine.</p>
-                <div class="usuario">
-                    <img src="images/profile-3.jpg" alt="no-encontrado">
-                    <div>
-                        <h2>Iva Boyd</h2>
-                        <p class="cargo-usuario">Founder & CEO, Huddle</p>
+                <div class="opinion">
+                    <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our
+                        team has become a wll-oiled collaboration machine.</p>
+                    <div class="usuario">
+                        <img src="images/profile-3.jpg" alt="no-encontrado">
+                        <div>
+                            <h2>Iva Boyd</h2>
+                            <p class="cargo-usuario">Founder & CEO, Huddle</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <footer>
+        <div id="contenedor-footer">
+            <div id="contenedor-access">
+                <h2>Get early access today</h2>
+                <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+                    questions, our support team would be happy to help you.</p>
+                <form action="" id="formulario-email">
+                    <input type="email" name="email" placeholder="email@example.com" id="email" class="boton">
+                    <input type="submit" class="boton" id="gratis" value="Get Started For Free">
+                </form>
+            </div>
 
+            <div>
+                <img src="images/logo.svg" alt="no-encontrado" id="logo-footer">
+            </div>
+            <div id="contenedor-info-footer">
+                <div id="contenedor-ubicacion">
+                    <img src="images/icon-location.svg" alt="no-encontrado" class="icono-footer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsa at magnam repellat odit,
+                        nobis
+                        consequatur eligendi nam ut?</p>
+                </div>
+                <div id="contenedor-footer-contacto">
+                    <div class="contenedor-contacto">
+                        <img src="images/icon-phone.svg" alt="no-encontrado" class="icono-footer">
+                        <p>+1-543-123-4567</p>
+                    </div>
+                    <div class="contenedor-contacto">
+                        <img src="images/icon-email.svg" alt="no-encontrado" class="icono-footer">
+                        <p>example@fylo.com</p>
+                    </div>
+                </div>
+                <div class="contenedor-footer-vertical">
+                    <a href="">About Us</a>
+                    <a href="">Jobs</a>
+                    <a href="">Press</a>
+                    <a href="">Blog</a>
+                </div>
+                <div class="contenedor-footer-vertical">
+                    <a href="">Contact Us</a>
+                    <a href="">Terms</a>
+                    <a href="">Privacy</a>
+                </div>
+                <div id="contenedor-redes">
+                    <img src="images/fb.svg" alt="no-encontrado" class="icono-footer">
+                    <img src="images/instagram.svg" alt="no-encontrado" class="icono-footer">
+                    <img src="images/twitter.svg" alt="no-encontrado" class="icono-footer">
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
