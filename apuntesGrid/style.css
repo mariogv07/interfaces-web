@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 4px solid fuchsia;
+    width: 100%;
+    height: 500px;
+    background-color: seagreen;
+    /* Reparte el ancho entre todo el contenido */
+    display: grid;
+    /* grid-template-areas: 
+    'header header header sidebar'
+    'main main main sidebar'
+    'main main main sidebar'
+    'footer footer footer footer'; */
+
+
+    /* Crea 2 columnas, una ocupa el 25% del width y otra el 40% del width */
+    /* grid-template-columns: 25% 40%; */
+
+    /* Crea 2 columnas con un ancho de 1 fracción la primera y un ancho de 2 fracciones la segunda */
+    /* grid-template-columns: repeat(2, 1fr 2fr); */
+
+    /* minmax(). Tamaño mínimo, si tiene más disponible se usa el max */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-rows: repeat(2, 20%); */
+
+    /* row-gap: 30px;
+    column-gap: 50px; */
+
+    /* Para cambiar la dirección */
+    /* grid-auto-flow: column; */
+
+    /* Para controlar el tamaño de lo que se desborda */
+    /* grid-auto-rows: 0.5fr;
+    grid-auto-columns: 0.5fr; */
+
+    /* Para que no haya espacios en blanco. Si encuentra un elemento que quepa en ese espacio lo coloca ahí */
+    /* grid-auto-flow: dense; */
+
+    /* Para la celda */
+    /* justify-content:center; */
+    /* Para el contenido de dentro de la celda */
+    /* justify-items: center; */
+
+    /* Para la celda */
+    /* align-content: center; */
+    /* Para el contenido de dentro de la celda */
+    /* align-items: center; */
+}
+
+.item {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1 {
+    background: skyblue;
+    /* grid-area: header; */
+
+    /* Columna inicial que queremos que ocupe/ Columna final que queremos que ocupe */
+    /* grid-column: 2/-1; */
+
+    /* Desde donde empieces, ocupa 3 columnas */
+    /* grid-column: span 2; */
+
+    /* Fila inicial que queremos que ocupe/ Fila final que queremos que ocupe */
+    /* grid-row: 1/3; */
+    /* grid-row: span 2; */
+
+    /* align-self: end; */
+}
+
+.item2 {
+    background: crimson;
+
+    /* Para indicar el nombre del área */
+    /* grid-area: main; */
+}
+
+.item3 {
+    background: mediumvioletred;
+    /* grid-column: span 3; */
+    /* grid-area: sidebar; */
+}
+
+.item4 {
+    background: darkorange;
+    /* grid-area: footer; */
+}
+
+.item5 {
+    background: rebeccapurple;
+}
+
+.item6 {
+    background: lawngreen;
+}
+
+/* RESPONSIVEEEEEEEE */
+@media screen and(max-width: 800px) {
+    .item6 {
+        background: red;
+    }
+}
