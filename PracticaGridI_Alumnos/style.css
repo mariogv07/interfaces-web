@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body {
+    background-color: #e6ecf8;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/****************************************************** Header ************************************************************************/
+header {
+    display: flex;
+    width: 100%;
+    max-width: 75vw;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5vh auto;
+}
+
+.contenedor-logo {
+    background-color: #061533;
+    padding: 1vw 2vh;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 3vh;
+}
+
+.boton-descargar {
+    background-color: #2566e3;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    img {
+        width: 17px;
+        height: auto;
+    }
+}
+
+.links {
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+}
+
+.enlace {
+    color: #394760;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/*************** Hero *******************/
+.hero{
+    background: linear-gradient(to right, #256adf,#56c47d, #eddd53);
+    width: 100%;
+    border-radius: 20px;
+    padding: 5vh 2vw;
+    color: white;
+}
+
+.hero-contenedor-izquierda{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.contenedor-ver-descargar{
+    a{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 12px;
+        border-radius: 5px;
+    }
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+
+#demo{
+    background-color: #1c6c99;
+}
+
+#descargar{
+    background-color: #061533;
+}
+
+
+.contenedor-usuario-paises{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.contenedor-dato{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.separador{
+    width: 1px;
+    height: auto;
+    background-color: white;
+}
+
+.hero-contenedor-derecha{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
