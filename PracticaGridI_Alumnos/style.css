@@ -1,3 +1,8 @@
+/* RESPONSIVE */
+/* escritorio: 1200 */
+/* tablet: 992 */
+/* movil: 576 o 568 */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +23,7 @@ a {
 header {
     display: flex;
     width: 100%;
-    max-width: 75vw;
+    max-width: 60vw;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -38,6 +43,7 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     row-gap: 3vh;
+    /* justify-content: center; */
 }
 
 .boton-descargar {
@@ -47,6 +53,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 5px;
+
     img {
         width: 17px;
         height: auto;
@@ -68,66 +75,289 @@ nav {
 }
 
 /*************** Hero *******************/
-.hero{
-    background: linear-gradient(to right, #256adf,#56c47d, #eddd53);
+.hero {
+    background: linear-gradient(to right, #256adf, #56c47d, #eddd53);
     width: 100%;
     border-radius: 20px;
     padding: 5vh 2vw;
     color: white;
+    display: flex;
 }
 
-.hero-contenedor-izquierda{
+.hero-contenedor-izquierda {
+    h1 {
+        font-weight: normal;
+    }
+
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+    gap: 5vh;
 }
 
-.contenedor-ver-descargar{
-    a{
+.contenedor-ver-descargar {
+    a {
         display: flex;
         align-items: center;
-        gap: 5px;
+        justify-content: space-between;
         padding: 12px;
         border-radius: 5px;
     }
     flex-wrap: wrap;
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 70%;
     justify-content: space-between;
+    gap: 20px;
 }
 
-#demo{
+.icono-ver-descargar {
+    img{
+        width: 100%;
+        height: auto;
+    }
+    width: 20%;
+    height: auto;
+}
+
+#demo {
     background-color: #1c6c99;
 }
 
-#descargar{
+#descargar {
     background-color: #061533;
 }
 
 
-.contenedor-usuario-paises{
+.contenedor-usuario-paises {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     width: 70%;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.contenedor-dato{
+.contenedor-dato {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.separador{
+.separador {
     width: 1px;
     height: auto;
     background-color: white;
 }
 
-.hero-contenedor-derecha{
-    background-color: black;
+.hero-contenedor-derecha {
+    z-index: 100;
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+
+.contenedor-hero-imagen {
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    width: 90%;
+    position: absolute;
+    margin-left: 12%;
+}
+
+/*** Tablet ***/
+@media(max-width: 992px) {
+    .hero {
+        align-items: center;
+    }
+
+    .contenedor-hero-imagen {
+        position: static;
+    }
+
+    .separador {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .links {
+        justify-content: center;
+    }
+
+    .hero-contenedor-izquierda {
+        h1 {
+            font-size: 4vw;
+        }
+
+        p,
+        a {
+            font-size: 2vw;
+        }
+    }
+}
+
+/************************************************* Section Características *************************************************************/
+.contenedor-caracteristicas {
+    h1 {
+        font-weight: normal;
+        color: #414e67;
+        grid-column: span 2;
+    }
+
+    margin: 10vh auto;
     width: 100%;
+    max-width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.contenedor-imagen-caracteristicas {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    grid-row: span 4;
+    width: auto;
     height: 100%;
+}
+
+.caracteristica {
+    display: flex;
+    align-items: center;
+    padding: 20px 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    gap: 15px;
+}
+
+#caracteristica-blue {
+    background-color: #2566e3;
+    color: #ffffff;
+}
+
+.contenido-caracteristicas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    h1 {
+        font-size: xx-small;
+    }
+
+    p {
+        font-size: small;
+    }
+}
+
+#plan-blue {
+    background-color: #061533;
+    color: white;
+}
+
+/************************************************* Section Precios *************************************************************/
+
+.contenedor-precios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1rf);
+
+    h1 {
+        grid-column: span 4;
+        font-weight: normal;
+        color: #414e67;
+    }
+
+    justify-items: center;
+    width: 100%;
+    max-width: 60vw;
+    margin: 0 auto;
+    column-gap: 10px;
+    row-gap: 20px;
+}
+
+.contenedor-plan {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    gap: 20px;
+
+    p {
+        font-size: small;
+    }
+}
+
+.precio-plan {
+    display: flex;
+    align-items: baseline;
+    gap: 1vw;
+
+    p {
+        color: grey;
+    }
+}
+
+.caracteristica-plan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-check-plan {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    width: 10%;
+    height: auto;
+}
+
+.button-plan {
+    background-color: #2566e3;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+/************************************************************** Footer *************************************************************/
+footer {
+    display: flex;
+    width: 100%;
+    max-width: 60vw;
+    margin: 50px auto;
+    background-color: #061533;
+    padding: 20px;
+    align-items: center;
+    border-radius: 5px;
+    font-size: small;
+    justify-content: space-between;
+}
+
+.contenedor-copyright-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: gray;
+}
+
+.enlaces-footer {
+    display: flex;
+    gap: 20px;
 }
