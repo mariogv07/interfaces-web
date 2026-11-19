@@ -104,6 +104,7 @@ nav {
         padding: 12px;
         border-radius: 5px;
     }
+
     flex-wrap: wrap;
     display: flex;
     align-items: center;
@@ -113,10 +114,11 @@ nav {
 }
 
 .icono-ver-descargar {
-    img{
+    img {
         width: 100%;
         height: auto;
     }
+
     width: 20%;
     height: auto;
 }
@@ -201,6 +203,10 @@ nav {
             font-size: 2vw;
         }
     }
+
+    header {
+        max-width: 80vw;
+    }
 }
 
 /************************************************* Section Características *************************************************************/
@@ -211,7 +217,7 @@ nav {
         grid-column: span 2;
     }
 
-    margin: 10vh auto;
+    margin: 15vh auto;
     width: 100%;
     max-width: 60vw;
     display: grid;
@@ -267,6 +273,25 @@ nav {
 #plan-blue {
     background-color: #061533;
     color: white;
+}
+
+/*** Tablet ***/
+@media(max-width: 992px) {
+    .contenedor-caracteristicas {
+        margin: 0 auto;
+        max-width: 80vw;
+    }
+
+    .contenedor-imagen-caracteristicas {
+        grid-column: span 2;
+    }
+
+    .caracteristica {
+        display: flex;
+        align-items: center;
+        padding: 20px 5px;
+    }
+
 }
 
 /************************************************* Section Precios *************************************************************/
