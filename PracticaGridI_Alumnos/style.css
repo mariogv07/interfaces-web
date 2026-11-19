@@ -297,35 +297,43 @@ nav {
 /************************************************* Section Precios *************************************************************/
 
 .contenedor-precios {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1rf);
-
+    display: flex;
     h1 {
-        grid-column: span 4;
         font-weight: normal;
         color: #414e67;
     }
-
     justify-items: center;
+    align-items: center;
     width: 100%;
     max-width: 60vw;
     margin: 0 auto;
-    column-gap: 10px;
-    row-gap: 20px;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.contenedor-padre-planes{
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+    background-color: black;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contenedor-plan {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: white;
     border-radius: 5px;
     padding: 20px;
-    gap: 20px;
-
+    height: 35vh;
     p {
         font-size: small;
     }
+    width: 13vw;
+    min-width: 177px;
 }
 
 .precio-plan {
@@ -359,6 +367,23 @@ nav {
     display: flex;
     padding: 10px;
     justify-content: center;
+}
+
+/*** Tablet ***/
+@media(max-width: 992px) {
+    .contenedor-plan{
+        p{
+            font-size: 1vw;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .contenedor-plan{
+        p{
+            font-size: 2vw;
+        }
+    }
 }
 
 /************************************************************** Footer *************************************************************/
