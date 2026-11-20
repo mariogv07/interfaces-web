@@ -32,8 +32,31 @@ header {
 
 .contenedor-logo {
     background-color: #061533;
-    padding: 1vw 2vh;
+    padding: 20px 40px;
     border-radius: 10px;
+    position: relative;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.contenedor-logo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    height: 27px;
+    background-color: #061533;
+    z-index: -1;
+}
+
+.contenedor-logo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+    border-bottom: 69px solid #061533;
+    border-right: 100px solid transparent;
 }
 
 nav {
@@ -43,7 +66,7 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     row-gap: 3vh;
-    /* justify-content: center; */
+    column-gap: 100px;
 }
 
 .boton-descargar {
@@ -109,7 +132,6 @@ nav {
     display: flex;
     align-items: center;
     width: 70%;
-    justify-content: space-between;
     gap: 20px;
 }
 
@@ -185,14 +207,6 @@ nav {
         display: none;
     }
 
-    nav {
-        justify-content: center;
-    }
-
-    .links {
-        justify-content: center;
-    }
-
     .hero-contenedor-izquierda {
         h1 {
             font-size: 4vw;
@@ -202,10 +216,53 @@ nav {
         a {
             font-size: 2vw;
         }
+
+        gap: 3vh;
     }
 
     header {
         max-width: 80vw;
+    }
+
+    .contenedor-ver-descargar {
+        gap: 1vh;
+    }
+}
+
+/*** Móvil ***/
+@media(max-width: 609px) {
+    .hero-contenedor-izquierda {
+        h1 {
+            font-size: 6vw;
+        }
+
+        p,
+        a {
+            font-size: 3vw;
+        }
+    }
+}
+
+@media(max-width: 1267px) {
+    .contenedor-logo{
+        border-radius: 10px;
+    }
+    .contenedor-logo::before {
+        height: 0;
+    }
+
+    .contenedor-logo::after {
+        border-bottom: 0;
+        border-right: 0;
+    }
+
+    nav {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .links {
+        justify-content: center;
     }
 }
 
@@ -249,6 +306,7 @@ nav {
     border-radius: 5px;
     background-color: #ffffff;
     gap: 15px;
+    height: 100%;
 }
 
 #caracteristica-blue {
@@ -282,10 +340,6 @@ nav {
         max-width: 80vw;
     }
 
-    .contenedor-imagen-caracteristicas {
-        grid-column: span 2;
-    }
-
     .caracteristica {
         display: flex;
         align-items: center;
@@ -294,31 +348,42 @@ nav {
 
 }
 
+@media(max-width: 1370px) {
+    .contenedor-imagen-caracteristicas {
+        grid-column: span 2;
+    }
+
+    .contenedor-imagen-caracteristicas {
+        height: 50vh;
+    }
+}
+
 /************************************************* Section Precios *************************************************************/
 
 .contenedor-precios {
     display: flex;
+
     h1 {
         font-weight: normal;
         color: #414e67;
     }
+
     justify-items: center;
     align-items: center;
     width: 100%;
     max-width: 60vw;
     margin: 0 auto;
+    margin-top: 5vh;
     flex-direction: column;
     gap: 3vh;
 }
 
-.contenedor-padre-planes{
+.contenedor-padre-planes {
     display: flex;
     gap: 2vw;
     flex-wrap: wrap;
-    background-color: black;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
 }
 
 .contenedor-plan {
@@ -329,10 +394,12 @@ nav {
     border-radius: 5px;
     padding: 20px;
     height: 35vh;
+
     p {
         font-size: small;
     }
-    width: 13vw;
+
+    width: 22%;
     min-width: 177px;
 }
 
@@ -365,24 +432,25 @@ nav {
 .button-plan {
     background-color: #2566e3;
     display: flex;
-    padding: 10px;
+    padding: 1vw;
     justify-content: center;
 }
 
 /*** Tablet ***/
 @media(max-width: 992px) {
-    .contenedor-plan{
-        p{
-            font-size: 1vw;
+    .contenedor-plan {
+
+        p,
+        a {
+            font-size: 15px;
         }
     }
 }
 
-@media(max-width: 576px) {
-    .contenedor-plan{
-        p{
-            font-size: 2vw;
-        }
+/*** Móvil ***/
+@media(max-width: 609px) {
+    .contenedor-padre-planes {
+        justify-content: space-around;
     }
 }
 
@@ -398,6 +466,9 @@ footer {
     border-radius: 5px;
     font-size: small;
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 5vh;
+    column-gap: 4vw;
 }
 
 .contenedor-copyright-footer {
@@ -410,4 +481,12 @@ footer {
 .enlaces-footer {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+}
+
+/*** Tablet ***/
+@media(max-width: 992px) {
+    .enlaces-footer {
+        flex-direction: column;
+    }
 }
