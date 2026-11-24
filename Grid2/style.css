@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.contenedores-centrados {
+    margin: 0 auto;
+}
+
+/******************************************************Header**************************************************************/
+header {
+    height: 100vh;
+    background-image: url(images/fondo.png);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+}
+
+.logo {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        color: burlywood;
+    }
+
+    h2 {
+        color: white;
+    }
+}
+
+nav {
+    background-color: rgba(30, 15, 3, 0.918);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    gap: 1vw;
+    align-items: center;
+}
+
+.contenedor-sorpresa {
+    background-color: rgba(30, 15, 3, 0.918);
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 3vh 1vw;
+    align-items: center;
+    margin-right: 35vw;
+    text-align: center;
+    gap: 2vh;
+    color: white;
+    position: relative;
+    padding-bottom: 7vh;
+    border-radius: 10px;
+
+    h4 {
+        color: burlywood;
+    }
+
+    h1 {
+        font-weight: normal;
+    }
+
+    .boton-claro {
+        position: absolute;
+        bottom: -2vh;
+    }
+}
+
+.boton-claro {
+    background-color: rgb(249, 163, 49);
+    padding: 1.5vh 2vw;
+    border-radius: 5px;
+    color: rgb(30, 15, 3);
+}
+
+/******************************************************Los más vendidos**************************************************************/
+
+.fondo-vendidos {
+    background-image: url(images/bg-img1.jpg);
+    background-size: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-vendidos {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 2vh;
+
+    h2 {
+        text-align: center;
+        grid-column: 1/span 2;
+        justify-self: center;
+    }
+}
+
+.contenedor-producto-vendido {
+    background-color: rgba(251, 233, 211, 0.574);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2vh 2vw;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 4vh;
+}
+
+.contenedor-imagen-producto {
+    width: 70%;
+    height: auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+}
+
+/******************************************************Novedades**************************************************************/
+.contenedor-novedades {
+    background-image: url(images/bg-img2.jpg);
+    background-size: 100vw;
+    padding: 10vh 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-imagen-novedades {
+    width: auto;
+    height: 50%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    position: relative;
+}
+
+.descripcion-novedades {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5vh;
+    padding-top: 10vh;
+}
+
+.boton-oscuro {
+    background-color: rgb(30, 15, 3);
+    padding: 1.5vh 2vw;
+    border-radius: 5px;
+}
+
+/******************************************************Menu**************************************************************/
+.fondo-menu {
+    background-color: rgb(249, 163, 49);
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+}
+
+.contenedor-menu {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+}
+
+.grilla-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 3vh;
+    border: 1px double black;
+}
+
+.contenedor-plato {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin: 0.5vh 2vw;
+    padding-bottom: 2vh;
+    border-bottom: 3px dotted black;
+}
+
+.plato-precio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-mosaico {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    div {
+        width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
