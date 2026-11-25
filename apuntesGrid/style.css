@@ -104,7 +104,7 @@
     background: lawngreen;
 }
 
-/* RESPONSIVEEEEEEEE */
+/* Para hacerlo responsive */
 @media(max-width: 800px) {
     .item6 {
         background: red;
